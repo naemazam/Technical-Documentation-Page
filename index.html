@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+			integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Technical Documentation Page</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div>
+				<div id="open-nav-btn" class="ham-nav-arrow-btn show">
+					<i class="far fa-arrow-alt-circle-right arrow"></i>
+				</div>
+				<div id="close-nav-btn" class="ham-nav-arrow-btn hide">
+					<i class="far fa-arrow-alt-circle-left arrow"></i>
+				</div>
+			</div>
+			<div class="navigation">
+				<nav id="navbar">
+					<header id="navbar-header">
+						<div>
+							<i class="fab fa-vuejs"></i>
+							<span>Vue.js</span>
+						</div>
+					</header>
+					<ul class="nav-list nobullets">
+						<li>
+							<a class="nav-link notextdec link-grey" href="#Introduction"
+								>Introduction</a
+							>
+						</li>
+						<li>
+							<a class="nav-link notextdec link-grey" href="#Getting_Started"
+								>Getting Started</a
+							>
+						</li>
+						<li>
+							<a
+								class="nav-link notextdec link-grey"
+								href="#Declarative_Rendering"
+								>Declarative Rendering</a
+							>
+						</li>
+						<li>
+							<a
+								class="nav-link notextdec link-grey"
+								href="#Handling_User_Input"
+								>Handling User Input</a
+							>
+						</li>
+						<li>
+							<a
+								class="nav-link notextdec link-grey"
+								href="#Conditionals_and_Loops"
+								>Conditionals and Loops</a
+							>
+						</li>
+						<li>
+							<a
+								class="nav-link notextdec link-grey"
+								href="#Relation_to_Custom_Elements"
+								>Relation to Custom Elements</a
+							>
+						</li>
+						<li>
+							<a class="nav-link notextdec link-grey" href="#Reference"
+								>Reference</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<main id="main-doc">
+				<section class="main-section" id="Introduction">
+					<header>Introduction</header>
+					<article>
+						<p>
+							Vue (pronounced /<em>vjuː</em>/, like view) is a progressive
+							framework for building user interfaces. Unlike other monolithic
+							frameworks, Vue is designed from the ground up to be incrementally
+							adoptable. The core library is focused on the view layer only, and
+							is easy to pick up and integrate with other libraries or existing
+							projects. On the other hand, Vue is also perfectly capable of
+							powering sophisticated Single-Page Applications when used in
+							combination with modern tooling and supporting libraries (opens
+							new window).
+						</p>
+						<p>
+							If you’d like to learn more about Vue before diving in,
+							<a
+								href="https://www.vuemastery.com/courses/intro-to-vue-3/intro-to-vue3"
+								target="_blank"
+								class="link-grey text-bold"
+								>watch a free video course on Vue Mastery</a
+							>.
+						</p>
+					</article>
+				</section>
+				<section class="main-section" id="Getting_Started">
+					<header>Getting Started</header>
+					<article>
+						<p>
+							The official guide assumes intermediate level knowledge of HTML,
+							CSS, and JavaScript. If you are totally new to frontend
+							development, it might not be the best idea to jump right into a
+							framework as your first step - grasp the basics then come back!
+							Prior experience with other frameworks helps, but is not required.
+						</p>
+						<p>
+							The easiest way to try out Vue.js is using the Hello World
+							example:
+						</p>
+
+						<p>HTML:</p>
+						<p>
+							<code
+								>&lt;div id="hello-vue" class="demo"&gt; {{ message }}
+								&lt;/div&gt;</code
+							>
+						</p>
+						<p>JS:</p>
+						<p>
+							<code
+								>const HelloVueApp = { data() { return { message: 'Hello Vue!!'
+								} } } Vue.createApp<wbr />(HelloVueApp)<wbr />.mount('#hello-vue')</code
+							>
+						</p>
+						<p>
+							The<a
+								href="https://v3.vuejs.org/guide/installation.html"
+								target="_blank"
+								class="link-grey text-bold"
+							>
+								Installation page</a
+							>
+							provides more options of installing Vue. Note: it is not
+							recommended that beginners start with
+							<code class="inline-code">vue-cli</code>, especially if you are
+							not yet familiar with Node.js-based build tools
+						</p>
+					</article>
+				</section>
+				<section class="main-section" id="Declarative_Rendering">
+					<header>Declarative Rendering</header>
+					<article>
+						<p>
+							At the core of Vue.js is a system that enables us to declaratively
+							render data to the DOM using straightforward template syntax:
+						</p>
+						<p>HTML:</p>
+						<p>
+							<code
+								>&lt;div id="counter"&gt; Counter: {{ counter }}
+								&lt;/div&gt;</code
+							>
+						</p>
+						<p>JS:</p>
+						<p>
+							<code
+								>const Counter = { data() { return { counter: 0 } } }
+								Vue.createApp(Counter)<wbr />.mount('#counter')</code
+							>
+						</p>
+						<p>
+							We have already created our very first Vue app! This looks pretty
+							similar to rendering a string template, but Vue has done a lot of
+							work under the hood. The data and the DOM are now linked, and
+							everything is now reactive. How do we know? Take a look at the
+							example below where counter property increments every second and
+							you will see how rendered DOM changes:
+						</p>
+						<p>JS:</p>
+						<p>
+							<code
+								>const CounterApp = { data() { return { counter: 0 } },
+								mounted() { setInterval(() => { this.counter++ }, 1000) }
+								}</code
+							>
+						</p>
+					</article>
+				</section>
+				<section class="main-section" id="Handling_User_Input">
+					<header>Handling User Input</header>
+					<article>
+						<p>
+							To let users interact with your app, we can use the v-on directive
+							to attach event listeners that invoke methods on our instances:
+						</p>
+						<p>HTML:</p>
+						<p>
+							<code
+								>&lt;div id="event-handling"> &lt;p&gt;{{ message }}&lt;/p&gt;
+								&lt;button v-on:click=<wbr />"reverseMessage"><wbr />Reverse
+								Message&lt;/button&gt; &lt;/div&gt;</code
+							>
+						</p>
+						<p>JS:</p>
+						<p>
+							<code
+								>const EventHandling = { data() { return { message: 'Hello
+								Vue.js!' } }, methods: { reverseMessage() { this.message =
+								this.message .split('') .reverse() .join('') } } }
+								Vue.createApp<wbr />(EventHandling)<wbr />.mount('#event-handling')</code
+							>
+						</p>
+						<p>
+							Note that in this method we update the state of our app without
+							touching the DOM - all DOM manipulations are handled by Vue, and
+							the code you write is focused on the underlying logic.
+						</p>
+					</article>
+				</section>
+				<section class="main-section" id="Conditionals_and_Loops">
+					<header>Conditionals and Loops</header>
+					<article>
+						<p>It's easy to toggle the presence of an element, too:</p>
+						<p>HTML</p>
+						<p>
+							<code
+								>&lt;div id="conditional-rendering"&gt; &lt;span v-if="seen">Now
+								you see me&lt;/span&gt; &lt;/div&gt;</code
+							>
+						</p>
+						<p>JS:</p>
+						<p>
+							<code
+								>const ConditionalRendering = { data() { return { seen: true } }
+								} Vue.createApp<wbr />(ConditionalRendering)<wbr />.mount('#conditional-rendering')</code
+							>
+						</p>
+						<p>
+							This example demonstrates that we can bind data to not only text
+							and attributes, but also the structure of the DOM. Moreover, Vue
+							also provides a powerful transition effect system that can
+							automatically apply transition effects when elements are
+							inserted/updated/removed by Vue.
+						</p>
+					</article>
+				</section>
+				<section class="main-section" id="Relation_to_Custom_Elements">
+					<header>Relation to Custom Elements</header>
+					<article>
+						<p>
+							You may have noticed that Vue components are very similar to
+							Custom Elements, which are part of the Web Components Spec. That's
+							because Vue's component syntax is loosely modeled after the spec.
+							For example, Vue components implement the Slot API and the is
+							special attribute. However, there are a few key differences:
+						</p>
+						<ol>
+							<li>
+								The Web Components Spec has been finalized but is not natively
+								implemented in every browser.
+								<ul>
+									<li>
+										Safari 10.1+, Chrome 54+ and Firefox 63+ natively support
+										web components.
+									</li>
+									<li>
+										In comparison, Vue components work consistently in all
+										supported browsers (IE11 with compatibility build and
+										above).
+									</li>
+									<li>
+										When needed, Vue components can also be wrapped inside a
+										native custom element.
+									</li>
+								</ul>
+							</li>
+							<li>
+								Vue components provide important features that are not available
+								in plain custom elements, most notably cross-component data
+								flow, custom event communication and build tool integrations.
+							</li>
+						</ol>
+						<p>
+							Although Vue doesn't use custom elements internally, it has great
+							interoperability when it comes to consuming or distributing as
+							custom elements. Vue CLI also supports building Vue components
+							that register themselves as native custom elements.
+						</p>
+					</article>
+				</section>
+				<section class="main-section" id="Reference">
+					<header>Reference</header>
+					<article>
+						<p>
+							The information used for this documentation can be found on
+							<a
+								href="https://v3.vuejs.org/guide/introduction.html"
+								target="_blank"
+								class="link-grey text-bold"
+								>official Vue.js page</a
+							>
+						</p>
+					</article>
+				</section>
+			</main>
+		</div>
+		<footer>
+			<div id="creator">Created by Azam</div>
+			<div class="footer-links">
+				<a href="https://github.com/naemazam" target="_blank" class="link-grey">
+					<p class="sr-only">github.com profile page</p>
+					<i class="fab fa-github fa-lg" aria-hidden="true"></i
+				></a>
+				<a href="https://twitter.com/naemazamankon" target="_blank" class="link-grey">
+					<p class="sr-only">twitter profile page</p>
+					<i class="fab fa-twitter fa-lg" aria-hidden="true"></i
+				></a>
+				<a href="https://codepen.io/naemazam" target="_blank" class="link-grey">
+					<p class="sr-only">codepen.io profile page</p>
+					<i class="fab fa-codepen fa-lg" aria-hidden="true"></i></a>
+			</div>
+		</footer>
+		<script src="./script.js"></script>
+	</body>
+</html>
