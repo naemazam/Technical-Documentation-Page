@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation Page - Python</title>
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <title>Technical Documentation Page</title>
+  </head><link rel="stylesheet" href="./style2.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <body>
+    <nav id="navbar">
+      <header><img src="https://www.python.org/static/img/python-logo.png" width="280"></header>
+      <a href="#What_is_Python?" class="nav-link">What is Python?</a>
+      <a href="#Python_2_or_3" class="nav-link">Python 2 or 3</a>
+      <a href="#Installation" class="nav-link">Installation</a>
+      <a href="#Python_Interpreter" class="nav-link">Python Interpreter</a>
+      <a href="#Python_Interpreter_Interactive_Mode" class="nav-link">Python Interpreter Interactive Mode</a>
+      <a href="#The_Zen_of_Python" class="nav-link">The Zen of Python</a>
+      <a href="#Pros_and_Cons_of_Python" class="nav-link">Pros and Cons of Python</a>
+      <a href="#Documentation" class="nav-link">Documentation</a>
+      <a href="#Debugging" class="nav-link">Debugging</a>
+      <a href="#Hello_World!" class="nav-link">Hello World!</a>
+      <a href="#Want_to_learn_more?" class="nav-link">Want to learn more?</a>
+    </nav>
+    <main id="main-doc">
+      <!-- Number 111111111111111 -->
+      <section id="What_is_Python?" class="main-section">
+        <header>What is Python?</header>
+        <p><a href="https://www.python.org">Python</a> is a general purpose programming language which is dynamically typed, interpreted, and known for its easy
+        readability with great design principles.</p>
+        <p>To learn more about Python, check out these pages on python.org:</p>
+        <p><a href="https://www.python.org/doc/essays/blurb/">What is Python?</a></p>
+        <p><a href="https://docs.python.org/3/faq/general.html">Python FAQ</a>.</p>
+      </section>
+      <!-- Number 22222222222222222 -->
+      <section id="Python_2_or_3" class="main-section">
+        <header>Python 2 or 3</header>
+        <p>
+          <ul>
+            <li>The two versions are similar, with knowledge of one switching to writing code for the other is easy.</li>
+            <li><a href="https://wiki.python.org/moin/Python2orPython3">Python 2 or Python 3</a></li>
+            <ul>
+              <li><a href="https://www.python.org/dev/peps/pep-0373/">Python 2.x will not be maintained past 2020.</a></li>
+              <li>3.x is under active development. This means that all recent standard library improvements, for example, are only
+              available by default in Python 3.x.</li>
+              <li>Python ecosystem has amassed a significant amount of quality software over the years. The downside of breaking backwards
+              compatibility in 3.x is that some of that software (especially in-house software in companies) still doesn’t work on 3.x
+              yet.</li>
+            </ul>
+          </ul>
+        </p>
+      </section>
+      <!-- Number 3333333333333333333 -->
+      <section id="Installation" class="main-section">
+        <header>Installation</header>
+        <p>Most *nix based operating systems come with Python installed (usually Python 2, Python 3 in most recent ones). Replacing
+        the system Python is not recommended and may cause problems. However, different versions of Python can be safely
+        installed alongside the system Python. See <a href="https://docs.python.org/3/using/index.html">Python Setup and Usage</a>.</p>
+        <p>Windows doesn’t come with Python, the installer and instructions can be found <a href="https://docs.python.org/3/using/windows.html">here</a></p>
+      </section>
+      <!-- Number 444444444444444 -->
+      <section id="Python_Interpreter" class="main-section">
+        <header>Python Interpreter</header>
+        <p>The Python interpreter is what is used to run Python scripts.</p>
+        <p>If it is available and in Unix shell’s search path makes it possible to start it by typing the command <code>python</code> followed
+        by the script name will invoke the interpreter and run the script.</p>
+        <code>hello_campers.py <br>print('Hello campers!')</code>
+        <p>From terminal:</p>
+        <code>$ python hello_campers.py <br>
+        Hello campers!</code>
+        <p>“When multiple versions of Python are installed, calling them by version is possible depending on the install
+        configuration. In the Cloud9 ide custom environment, they can be invoked like:</p>
+        <code>$ python --version <br>
+        Python 2.7.6 <br>
+        $ python3 --version <br>
+        Python 3.4.3 <br>
+        $ python3.5 --version <br>
+        Python 3.5.1 <br>
+        $ python3.6 --version <br>
+        Python 3.6.2 <br>
+        $ python3.7 --version <br>
+        Python 3.7.1</code>
+      </section>
+      <!-- Number 555555555555555555 -->
+      <section id="Python_Interpreter_Interactive_Mode" class="main-section">
+        <header>Python Interpreter Interactive Mode</header>
+        <p>Interactive mode can be started by invoking the Python interpreter with the -i flag or without any arguments.</p>
+        <p>Interactive mode has a prompt where Python commands can be entered and run:</p>
+        <code>$ python3.5 <br>
+        Python 3.5.1 (default, Dec 18 2015, 00:00:00) <br>
+        GCC 4.8.4 on linux <br>
+        Type "help", "copyright", "credits" or "license" for more information. <br>
+        >>> print("Hello campers!") <br>
+        Hello campers! <br>
+        >>> 1 + 2 <br>
+        3 <br>
+        >>> exit() <br>
+        $</code>
+      </section>
+      <!-- Number 6666666666666 -->
+      <section id="The_Zen_of_Python" class="main-section">
+        <header>The Zen of Python</header>
+        <p>Some of the principles that influenced the design of Python are included as an Easter egg and can be read by using the
+        command inside Python interpreter interactive mode:</p>
+        <code>>>> import this <br>
+        The Zen of Python, by Tim Peters <br>
+        <br>
+        Beautiful is better than ugly. <br>
+        Explicit is better than implicit. <br>
+        Simple is better than complex. <br>
+        Complex is better than complicated.<br>
+        Flat is better than nested.<br>
+        Sparse is better than dense.<br>
+        Readability counts.<br>
+        Special cases aren't special enough to break the rules.<br>
+        Although practicality beats purity.<br>
+        Errors should never pass silently.<br>
+        Unless explicitly silenced.<br>
+        In the face of ambiguity, refuse the temptation to guess.<br>
+        There should be one-- and preferably only one --obvious way to do it.<br>
+        Although that way may not be obvious at first unless you're Dutch.<br>
+        Now is better than never.<br>
+        Although never is often better than *right* now.<br>
+        If the implementation is hard to explain, it's a bad idea.<br>
+        If the implementation is easy to explain, it may be a good idea.<br>
+        Namespaces are one honking great idea -- let's do more of those!</code>
+      </section>
+      <!-- Number 77777777777 -->
+      <section id="Pros_and_Cons_of_Python" class="main-section">
+        <header>Pros and Cons of Python</header>
+        <h3>Pros</h3>
+        <ol>
+          <li>Interactive language with a module support for almost all functionality.</li>
+          <li>Open Source: So, you can contribute to the community, the functions you have developed for future use and to help others</li>
+          <li>A lot of good interpreters and notebooks available for better experience like jupyter notebook.</li>
+        </ol>
+        <h3>Cons</h3>
+        <ol>
+          <li>Being open source, many different ways have developed over the year for same function. This sometimes, creates chaos for
+          others to read someone else code.</li>
+          <li>It is a slow language. So, a very bad language to use for developing general algorithms.</li>
+        </ol>
+      </section>
+      <!-- Number 8888888888888888 -->
+      <section id="Documentation" class="main-section">
+        <header>Documentation</header>
+        <p><a href="https://docs.python.org/3/">Python is well documented</a>. These docs include tutorials, guides, references and meta information for language.</p>
+        <p>Another important reference is the Python Enhancement Proposals (<a href="https://www.python.org/dev/peps/">PEPs</a>). Included in the PEPs is a style guide for
+        writing Python code, <code>PEP 8</code>.</p>
+      </section>
+      <!-- Number 999999999999 -->
+      <section id="Debugging" class="main-section">
+        <header>Debugging</header>
+        <p>Inline <code>print</code> statements can be used for simple debugging:</p>
+        <blockquote>
+          <p>… often the quickest way to debug a program is to add a few print statements to the source: the fast edit-test-debug
+          cycle makes this simple approach very effective.</p>
+          <cite>-<a href="https://www.python.org/doc/essays/blurb/">Executive Summary</a></cite>
+        </blockquote>
+        <p>Python also includes more powerful tools for debugging, such as:</p>
+        <ul>
+          <li>logging module, <i><a href="https://docs.python.org/3/library/logging.html">logging</a></i></li>
+          <li>debugging module, <i><a href="https://docs.python.org/3/library/pdb.html">pdb</a></i></li>
+        </ul>
+        <p>Just note that these exist for now.</p>
+      </section>
+      <!-- Number 10 -->
+      <section id="Hello_World!" class="main-section">
+        <header>Hello World!</header>
+        <p>Going back to the docs, we can read about the <code>print</code> function, a <i><a href="https://docs.python.org/3/library/functions.html">built-in function</a></i> of the <a href="https://docs.python.org/3/library/index.html">Python Standard Library</a>.</p>
+        <code>print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)</code>
+        <p>The built-in functions are listed in alphabetical order. The name is followed by a parenthesized list of formal
+        parameters with optional default values. Under that is a short description of the function and its parameters are given
+        and occasionally an example.</p>
+        <p>The <code>print</code> function in Python 3 replaces the print statement in Python 2.</p>
+        <code>>>> print("Hello world!") <br>
+        Hello world!</code>
+        <p>A function is called when the name of the function is followed by <code>()</code>. For the Hello world! example, the print function
+        is called with a string as an argument for the first parameter. For the rest of the parameters the defaults are used.</p>
+        <p>The argument that we called the <code>print</code> function with is a <code>str</code> object or <i>string</i>, one of Python’s <i><a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">built-in types</a></i>. Also the
+        most important thing about python is that you don’t have to specify the data type while declaring a variable, python’s
+        compiler will do that itself based on the type of value assigned.</p>
+        <p>The <code>objects</code> parameter is prefixed with a <code>*</code> which indicates that the function will take an arbitrary number of arguments
+        for that parameter.</p>
+      </section>
+      <!-- Number 11 -->
+      <section id="Want_to_learn_more?" class="main-section">
+        <header>Want to learn more?</header>
+        <p>Free Code Camp has some great resources. The web is a big place, there’s plenty more to explore:</p>
+        <ul>
+          <li>Python Practice Book: <a href="http://anandology.com/python-practice-book/index.html">http://anandology.com/python-practice-book/index.html</a></li>
+          <li>Think Python: <a href="http://greenteapress.com/thinkpython/html/index.html">http://greenteapress.com/thinkpython/html/index.html</a></li>
+          <li>Practical Business Python: <a href="http://pbpython.com/">http://pbpython.com/</a></li>
+          <li>Another course: <a href="https://realpython.com/?utmsource=fsp&utmmedium=promo&utm_campaign=bestresources">https://realpython.com/?utmsource=fsp&utmmedium=promo&utm_campaign=bestresources</a></li>
+          <li>General: <a href="https://www.fullstackpython.com/">https://www.fullstackpython.com/</a></li>
+          <li>Learn the Basics: <a href="https://www.codecademy.com/learn/learn-python">https://www.codecademy.com/learn/learn-python</a></li>
+          <li>Computer science using Python: <a href="https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11?ref=hackernoon#!">https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11?ref=hackernoon#!</a></li>
+          <li>List of more resources for learning python: <a href="https://github.com/vinta/awesome-python">https://github.com/vinta/awesome-python</a></li>
+          <li>Interactive Python: <a href="http://interactivepython.org/runestone/static/thinkcspy/index.html">http://interactivepython.org/runestone/static/thinkcspy/index.html</a></li>
+          <li>Developer’s Guide to Python: <a href="https://devguide.python.org/">https://devguide.python.org/</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
